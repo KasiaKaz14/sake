@@ -1,0 +1,382 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Lato", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #212121;
+  background-color: #fff;
+  background-image: url(/img/cherry-blossom.jpg);
+}
+
+/* /* .container {
+  min-width: 320px;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.icon-svg-hamburger {
+  @media screen and (min-width: 1200px) {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+}
+
+.icon-svg-close {
+  width: 80px;
+  position: absolute;
+  top: 5px;
+  right: 55px;
+}
+
+.page-header {
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
+.page-header .container {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu {
+  @media (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.menu .link {
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu .link:hover,
+.menu .link:focus {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* @media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+} */
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: whitesmoke;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #212121;
+  text-decoration: none;
+}
+
+.js-close-menu {
+  color: #212121;
+}
+
+.header {
+  background-color: transparent;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  height: 50px;
+  width: 465px;
+  @media screen and (min-width: 1200px) {
+    background-color: transparent;
+    margin: 0 auto 0 auto;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+    height: 70px;
+    width: 100%;
+  }
+}
+
+.my-site {
+  padding: 10px;
+}
+
+.link-section {
+  margin-top: 60px;
+}
+
+.link-to-order {
+  text-decoration: none;
+  background-color: #ea4aea;
+  color: whitesmoke;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+}
+
+.order-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.form-product {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  @media screen and (min-width: 1200px) {
+    margin: 0 auto;
+  }
+}
+
+.label-product {
+  margin-top: 7px;
+}
+
+.capacity-label-product {
+  margin-left: 90px;
+}
+
+.products {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 15px;
+  }
+}
+
+.continue-shopping-section {
+  margin-bottom: 20px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    display: flex;
+    gap: 230px;
+    margin-left: 350px;
+  }
+}
+
+.continue-shopping,
+.back-home {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  background-color: #ea4aea;
+  border-radius: 25px;
+  border: none;
+}
+
+.come-back-button {
+  width: 160px;
+  padding: 7px;
+  border: none;
+  border-radius: 25px;
+  color: whitesmoke;
+  background-color: #ea4aea;
+  margin: 25px auto;
+  text-decoration: none;
+}
+
+select {
+  width: 200px;
+  height: 40px;
+  border: 2px solid #e710c3;
+  border-radius: 5px;
+}
+
+input {
+  margin: 5px auto 0 auto;
+  width: 300px;
+  height: 40px;
+  border: 2px solid #e710c3;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 50px;
+  list-style: none;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 850px;
+    margin: 70px auto;
+  }
+}
+
+.product-list {
+  border: 2px solid #ec0bd7;
+  border-radius: 15px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  width: 400px;
+  height: 300px;
+  text-align: center;
+}
+
+.order-data-name {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+.order-button {
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  color: whitesmoke;
+  background-color: #ea4aea;
+  margin: 25px auto;
+}
+
+.order-button:hover,
+.order-button:focus {
+  cursor: pointer;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.custom-alert-content {
+  background: #f5f5dc;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.custom-alert-content .close-alert {
+  background: #ea4aea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.age-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 3px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.age-info-details {
+  background-color: #f5f5dc;
+  width: 400px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.age-info-alert {
+  color: red;
+}
+
+.over-age,
+.under-age {
+  width: 120px;
+  height: 40px;
+  color: whitesmoke;
+  background-color: #ea4aea;
+  border: none;
+  border-radius: 25px;
+}
+
+.over-age:hover,
+.over-age:focus,
+.under-age:hover,
+.under-age:focus {
+  cursor: pointer;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+}

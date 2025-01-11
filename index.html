@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="my-site">Moja Strona</section>
+      <section class="container">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="icon-svg-hamburger"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul class="menu">
+          <li><a href="#" class="link">Home</a></li>
+          <li><a href="./html/offer.html" class="link">Offer</a></li>
+          <li><a href="#" class="link">Contact</a></li>
+        </ul>
+      </section>
+    </header>
+    <section class="age-info">
+      <section class="age-info-details">
+        <h3 class="age-info-ask">Are you over 18 years old?</h3>
+        <p class="age-info-alert">We do not sell alcohol to people under 18</p>
+        <button class="over-age">Yes, I am</button>
+        <button class="under-age">No, I am not</button>
+      </section>
+    </section>
+    <section>Welcome to our online-store!</section>
+    <section class="link-section">
+      <p>
+        We are a brand that approaches Japanese tradition and the culture of
+        sake production with deep respect. Our mission is to create a beverage
+        that embodies the essence of Japanese craftmanship, combining age-old
+        techniques with modern quality.
+      </p>
+      <p>
+        Every bottle we produce is the result of passion, precision, abd
+        unwavering pursuit of perfection. We proudly use the finest ingredients
+        - carefully selected rice - pure water, and yeast that form the
+        foundation of our sake. Every stage of production, from milling the rice
+        to fermentation, is carried out with the utmost attention to detail to
+        ensure a unique, pure taste
+      </p>
+      <p>
+        While our methods are rooted in centuries-old tradition, we are not
+        afraid to experiment and introduce modern solutions to offer something
+        exceptional in every sip. Always with respect for the past, but with an
+        eye on the future, we strive to create sake that satisfies both
+        traditionalists and seekers of new flavours.
+      </p>
+      <p>
+        We are proud of our product and want our sake to be part of the special
+        moments you share with your loved ones. With us, every sip becomes a
+        journey to the heart of Japan - full of tradition, flavour, and passion.
+      </p>
+      <a href="./html/offer.html" class="link-to-order">Place Order</a>
+    </section>
+    <section class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          class="icon-svg-close"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="./index.html" class="link">Home</a></li>
+        <li><a href="/html/offer.html" class="link">Offer</a></li>
+        <li><a href="" class="link">Contact</a></li>
+      </ul>
+    </section>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/menu-mobile.js"></script>
+    <script src="./js/age.js"></script>
+  </body>
+</html>

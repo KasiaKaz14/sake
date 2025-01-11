@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="my-site">Moja Strona</section>
+      <section class="container">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="icon-svg-hamburger"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul class="menu">
+          <li><a href="/index.html" class="link">Home</a></li>
+          <li><a href="./offer.html" class="link">Offer</a></li>
+          <li><a href="#" class="link">Contact</a></li>
+        </ul>
+      </section>
+    </header>
+    <section>Welcome to our online-store!</section>
+  
+    <h2 class="order-title">Order products for in-store pickup</h2>
+    <section class="order-form">
+      <form class="form">
+        <section class="form-product">
+          <label for="product" class="label-product"
+            >Choose the shop:</label
+          >
+          <select name="products" id="">
+            <option value="shop">Shop</option>
+            <option value="shop1">22, Warszawska Street, Pułtusk</option>
+          </select>
+        </section>
+        <section class="order-data-name">
+          <label for="name">Your Name: </label>
+          <input type="text" placeholder="Write your name.." />
+          <label for="surname">Your Surname:</label>
+          <input type="text" placeholder="Write your surname.." />
+          <label for="email">Your Email:</label>
+          <input type="text" placeholder="Write your email.." />
+          <label for="number">Your Phone Number:</label>
+          <input type="number" placeholder="Write your number" />
+        </section>
+        <button class="order-button">Send Your Order</button>
+        <a href="./offer.html" class="come-back-button">Come back</a>
+        <section class="custom-alert" id="customAlert">
+            <section class="custom-alert-content">
+              <h3>Your order was sent successfully!</h3>
+              <p class="order-number">Your order number:</p>
+              <p>You can pick up your order in 2 days at our physical store</p>
+              <p>Wait for the message</p>
+              <button class="close-alert">OK</button>
+            </section>
+          </section>
+    <section class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          class="icon-svg-close"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="/index.html" class="link">Home</a></li>
+        <li><a href="./offer.html" class="link">Offer</a></li>
+        <li><a href="#" class="link">Contact</a></li>
+      </ul>
+    </section>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/menu-mobile.js"></script>
+    <script src="/js/button-send.js"></script>
+    <script src="/js/order-number.js"></script>
+  </body>
+</html>
