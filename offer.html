@@ -44,33 +44,42 @@
                 <p>Description:</p>
                    <details></details>
                 <p>Price:</p>
-                <button>Add to cart</button></li>
+                <button class="add-to-cart-btn">Add to cart</button></li>
         <li class="product-list">
             <img src="via.placeholder.com/200X130" alt="">
              <h3>Sake-Lemon</h3>
              <p>Description:</p>
                 <details></details>
              <p>Price:</p>
-             <button>Add to cart</button>
+             <button class="add-to-cart-btn">Add to cart</button>
         </li>
         <li class="product-list"><img src="via.placeholder.com/200X130" alt="">
             <h3>Sake-Peach</h3>
             <p>Description:</p>
                <details></details>
             <p>Price:</p>
-            <button>Add to cart</button></li>
+            <button class="add-to-cart-btn">Add to cart</button></li>
         <li class="product-list">   
             <h3>Sake-Jasmine</h3>
             <p>Description:</p>
                <details></details>
             <p>Price:</p>
-            <button>Add to cart</button></li></li></ul>
+            <button class="add-to-cart-btn">Add to cart</button></li></li></ul>
     </section>
    <section class="continue-shopping-section">
     <a href="./index.html" class="back-home ">Back home</a>
     <a href="./order.html" class="continue-shopping">Continue shopping</a>
    </section>   
     </section>
+
+    <section class="cart-section">
+      <h2>Cart:</h2>
+      <ul class="cart-items">
+        <!-- Produkty dodane do koszyka będą wyświetlane tutaj -->
+      </ul>
+      <p class="cart-total">Total: <span id="cart-total-price">0.00</span> zł</p>
+    </section>
+    
 
     <footer class="footer">
       <h3 class="my-site">Moja Strona</h3>
@@ -144,5 +153,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/menu-mobile.js"></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>

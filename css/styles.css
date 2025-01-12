@@ -286,7 +286,7 @@ input {
     flex-direction: row;
     flex-wrap: wrap;
     width: 850px;
-    margin: 70px auto;
+    margin: 70px 0 70px 70px;
   }
 }
 
@@ -297,6 +297,16 @@ input {
   width: 400px;
   height: 300px;
   text-align: center;
+}
+
+.add-to-cart-btn {
+  border: none;
+  border-radius: 25px;
+  color: whitesmoke;
+  background-color: #ec0bd7;
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .order-data-name {
@@ -475,4 +485,39 @@ input {
 .icon-sm-svg:hover {
   cursor: pointer;
   color: #121206;
+}
+
+.cart-section {
+  position: absolute;
+  top: 185px;
+  right: 25px;
+  border: 2px dotted #ec0bd7;
+  padding: 15px 30px 15px 10px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cart-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-total {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.increase-button,
+.decrease-button,
+.remove-button {
+  width: 70px;
+  height: 30px;
+  color: whitesmoke;
+  background-color: #ec0bd7;
+  border: none;
+  border-radius: 25px;
+  margin-left: 10px;
+  cursor: pointer;
 }
