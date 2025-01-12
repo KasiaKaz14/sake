@@ -297,6 +297,7 @@ input {
   width: 400px;
   height: 300px;
   text-align: center;
+  background-color: whitesmoke;
 }
 
 .add-to-cart-btn {
@@ -495,6 +496,7 @@ input {
   padding: 15px 30px 15px 10px;
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  background-color: whitesmoke;
 }
 
 .cart-section-summary {
