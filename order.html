@@ -43,81 +43,100 @@
         </ul>
       </section>
     </header>
-  
+
     <section class="order-main-section">
-    <section class="order-form">
-    <h2 class="order-title">Order products for in-store pickup</h2>
-    <section>
-      <form class="form">
-        <section class="form-product">
-          <label for="product" class="label-product"
-            >Choose the shop:</label
+      <section class="order-form">
+        <h2 class="order-title">Order products for in-store pickup</h2>
+        <form class="form" id="orderForm">
+          <section class="form-product">
+            <label for="shop" class="label-product">Choose the shop:</label>
+            <select name="shop" id="shop">
+              <option value="shop">Shop</option>
+              <option value="shop1">22, Warszawska Street, Pułtusk</option>
+            </select>
+          </section>
+          <section class="order-data-name">
+            <label for="name">Your Name: </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Write your name.."
+            />
+            <label for="surname">Your Surname:</label>
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              placeholder="Write your surname.."
+            />
+            <label for="email">Your Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Write your email.."
+            />
+            <label for="number">Your Phone Number:</label>
+            <input
+              type="number"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Write your number.."
+            />
+          </section>
+        </form>
+      </section>
+
+      <section class="order-shopping-section">
+        <a href="./offer.html" class="back-home">Back to offer</a>
+        <button class="continue-shopping" id="goToSummary">
+          Go to summary
+        </button>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <h3 class="my-site">Moja Strona</h3>
+      <section>
+        <h4 class="footer-contact-info">Contact with us:</h4>
+        <section class="footer-contact-section">
+          <a href="phoneto: +48987654321" class="footer-contact"
+            >+48 987 654 321</a
           >
-          <select name="products" id="">
-            <option value="shop">Shop</option>
-            <option value="shop1">22, Warszawska Street, Pułtusk</option>
-          </select>
-        </section>
-        <section class="order-data-name">
-          <label for="name">Your Name: </label>
-          <input type="text" placeholder="Write your name.." />
-          <label for="surname">Your Surname:</label>
-          <input type="text" placeholder="Write your surname.." />
-          <label for="email">Your Email:</label>
-          <input type="text" placeholder="Write your email.." />
-          <label for="number">Your Phone Number:</label>
-          <input type="number" placeholder="Write your number.." />
+          <a href="mailto: abc@contact.com" class="footer-contact"
+            >abc@contact.com</a
+          >
         </section>
       </section>
-          </section>
+      <section class="footer-sm-section">
+        <h4 class="footer-sm-title">Our social media:</h4>
+        <ul class="footer-sm">
+          <li>
+            <a href="#" class="icon-sm-link">
+              <svg class="icon-sm-svg" width="18" height="18">
+                <use href="./icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icon-sm-link">
+              <svg class="icon-sm-svg" width="18" height="18">
+                <use href="./icons.svg#icon-tiktok"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icon-sm-link">
+              <svg class="icon-sm-svg" width="18" height="18">
+                <use href="./icons.svg#icon-x"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
 
-          <section class="order-shopping-section">
-            <a href="./offer.html" class="back-home ">Back to offer</a>
-            <a href="./summary.html" class="continue-shopping">Go to summary</a>
-           </section>  
-          </section>
-
-          <footer class="footer">
-            <h3 class="my-site">Moja Strona</h3>
-            <section>
-              <h4 class="footer-contact-info">Contact with us:</h4>
-              <section class="footer-contact-section">
-                <a href="phoneto: +48987654321" class="footer-contact"
-                  >+48 987 654 321</a
-                >
-                <a href="mailto: abc@contact.com" class="footer-contact"
-                  >abc@contact.com</a
-                >
-              </section>
-            </section>
-            <section class="footer-sm-section">
-              <h4 class="footer-sm-title">Our social media:</h4>
-              <ul class="footer-sm">
-                <li>
-                  <a href="#" class="icon-sm-link">
-                    <svg class="icon-sm-svg" width="18" height="18">
-                      <use href="./icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="icon-sm-link">
-                    <svg class="icon-sm-svg" width="18" height="18">
-                      <use href="./icons.svg#icon-tiktok"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="icon-sm-link">
-                    <svg class="icon-sm-svg" width="18" height="18">
-                      <use href="./icons.svg#icon-x"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </footer>
-       
     <section class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu">
         <svg
@@ -149,6 +168,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/menu-mobile.js"></script>
-   
+    <script src="./js/order.js"></script>
   </body>
 </html>

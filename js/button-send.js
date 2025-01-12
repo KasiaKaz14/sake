@@ -1,7 +1,8 @@
-const sendButton = document.querySelector(".order-button"); // Przycisk zamówienia
-const customAlert = document.getElementById("customAlert"); // Kontener alertu
-const customAlertContent = document.querySelector(".custom-alert-content");
-const closeAlertButton = document.querySelector(".close-alert"); // Przycisk OK
+const sendButton = document.querySelector(".order-button");
+const customAlert = document.getElementById("customAlert");
+const closeAlertButton = document.querySelector(".close-alert");
+const cartItemsList = document.querySelector(".cart-items");
+const cartTotal = document.querySelector("#cart-total-price");
 
 sendButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -9,10 +10,25 @@ sendButton.addEventListener("click", (e) => {
 });
 
 closeAlertButton.addEventListener("click", () => {
-  customAlert.style.display = "none";
+  const orderForm = document.getElementById("orderForm");
+  if (orderForm) {
+    orderForm.reset();
+  }
+
+  localStorage.removeItem("orderSummary");
+  localStorage.removeItem("cart");
+
+  if (cartItemsList) {
+    cartItemsList.innerHTML = "";
+  }
+
+  if (cartTotal) {
+    cartTotal.textContent = "0.00";
+  }
+
+  window.location.replace("./index.html");
 });
 
-// Opcjonalnie: Zamknij alert po kliknięciu na tło
 customAlert.addEventListener("click", (event) => {
   if (event.target === customAlert) {
     customAlert.style.display = "none";

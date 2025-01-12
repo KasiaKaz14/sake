@@ -243,6 +243,7 @@ body {
 .continue-shopping-section,
 .order-shopping-section {
   margin-bottom: 20px;
+
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: row;
@@ -268,6 +269,7 @@ body {
   background-color: #ea4aea;
   border-radius: 25px;
   border: none;
+  cursor: pointer;
 }
 
 .come-back-button {
@@ -591,5 +593,19 @@ input {
 }
 
 .summary-footer {
-  margin-top: 40px;
+  margin-top: 80px;
+}
+
+.summary-container {
+  border: 2px dotted #ec0bd7;
+  padding: 15px 30px 15px 10px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  margin: 45px auto;
+  width: 500px;
+  background-color: whitesmoke;
+}
+
+.order-summary {
+  list-style: none;
 }
