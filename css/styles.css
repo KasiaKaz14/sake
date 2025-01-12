@@ -163,6 +163,9 @@ body {
 
 .my-site {
   padding: 10px;
+  @media screen and (min-width: 1200px) {
+    font-size: 25px;
+  }
 }
 
 .link-section {
@@ -181,6 +184,7 @@ body {
   padding: 10px 15px;
   border: none;
   border-radius: 25px;
+  margin-left: 250px;
 }
 
 .order-title {
@@ -395,16 +399,79 @@ input {
 .footer {
   @media screen and (min-width: 1200px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     width: 100%;
-    height: 190px;
+    height: 200px;
     background-color: #752e45;
     margin: 0;
-    margin-top: 130px;
+    margin-top: 50px;
+    padding-top: 30px;
   }
 }
 
 .footer-contact {
   color: whitesmoke;
   text-decoration: none;
+}
+
+.footer-contact-info {
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: whitesmoke;
+  }
+}
+
+.footer-contact-section {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+  }
+}
+
+.footer-contact-section a:hover,
+.footer-contact-section a:focus {
+  cursor: pointer;
+  color: #121206;
+}
+
+.footer-sm-title {
+  margin: 0;
+  color: whitesmoke;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.footer-sm {
+  list-style: none;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+.icon-sm-link {
+  border-radius: 50%;
+  background-color: #ec0bd7;
+  display: flex;
+  width: 44px;
+  height: 44px;
+}
+
+.icon-sm-svg {
+  width: 24px;
+  height: 24px;
+  fill: whitesmoke;
+  padding: 10px;
+}
+
+.icon-sm-svg:focus,
+.icon-sm-svg:hover {
+  cursor: pointer;
+  color: #121206;
 }
