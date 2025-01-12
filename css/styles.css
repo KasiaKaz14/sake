@@ -497,6 +497,15 @@ input {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
 }
 
+.cart-section-summary {
+  border: 2px dotted #ec0bd7;
+  padding: 15px 30px 15px 10px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  margin: 45px auto;
+  width: 500px;
+}
+
 .cart-items {
   list-style: none;
   display: flex;
@@ -520,4 +529,8 @@ input {
   border-radius: 25px;
   margin-left: 10px;
   cursor: pointer;
+}
+
+.summary-footer {
+  margin-top: 420px;
 }
