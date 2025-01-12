@@ -1,10 +1,16 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Lato", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, "Kanit", sans-serif;
   line-height: 1.5;
   color: #212121;
   background-color: #fff;
-  background-image: url(/img/cherry-blossom.jpg);
+}
+
+.main-section {
+  background-image: url(../img/cherryblossom-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 850px;
 }
 
 /* /* .container {
@@ -160,7 +166,12 @@ body {
 }
 
 .link-section {
-  margin-top: 60px;
+  @media screen and (min-width: 1200px) {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
 }
 
 .link-to-order {
@@ -379,4 +390,21 @@ input {
 .under-age:focus {
   cursor: pointer;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.footer {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 190px;
+    background-color: #752e45;
+    margin: 0;
+    margin-top: 130px;
+  }
+}
+
+.footer-contact {
+  color: whitesmoke;
+  text-decoration: none;
 }
