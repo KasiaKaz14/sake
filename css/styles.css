@@ -11,6 +11,15 @@ body {
   background-position: center;
   width: 100%;
   height: 850px;
+  margin-top: 20px;
+}
+
+.order-main-section {
+  background-image: url(../img/cherryblossom-midbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 /* /* .container {
@@ -223,7 +232,8 @@ body {
   }
 }
 
-.continue-shopping-section {
+.continue-shopping-section,
+.order-shopping-section {
   margin-bottom: 20px;
   @media screen and (max-width: 767px) {
     display: flex;
@@ -236,6 +246,10 @@ body {
     gap: 230px;
     margin-left: 350px;
   }
+}
+
+.order-shopping-section {
+  margin-top: 20px;
 }
 
 .continue-shopping,
@@ -333,6 +347,16 @@ input {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
 }
 
+.order-form {
+  border: 2px solid #ec0bd7;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  width: 500px;
+  padding-bottom: 35px;
+  margin: 35px auto;
+  background-color: whitesmoke;
+}
+
 .custom-alert {
   position: fixed;
   top: 0;
@@ -416,8 +440,8 @@ input {
     height: 200px;
     background-color: #752e45;
     margin: 0;
-    margin-top: 50px;
     padding-top: 30px;
+    margin-top: 35px;
   }
 }
 
@@ -506,6 +530,7 @@ input {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   margin: 45px auto;
   width: 500px;
+  background-color: whitesmoke;
 }
 
 .cart-items {
