@@ -1,15 +1,12 @@
 const cartContainer = document.querySelector(".cart-items");
 const totalPriceElement = document.getElementById("cart-total-price");
 
-// Inicjalizacja koszyka
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Funkcja do zapisywania koszyka w localStorage
 function saveCartToLocalStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Funkcja do dodawania produktu do koszyka
 function addToCart(productName, productPrice) {
   const existingProduct = cart.find((item) => item.name === productName);
 
@@ -27,14 +24,13 @@ function addToCart(productName, productPrice) {
   updateCart();
 }
 
-// Funkcja do zmniejszania liczby produktu w koszyku
 function decreaseQuantity(productName) {
   const product = cart.find((item) => item.name === productName);
 
   if (product) {
     product.quantity -= 1;
     if (product.quantity <= 0) {
-      cart = cart.filter((item) => item.name !== productName); // Usuń produkt, jeśli ilość jest 0
+      cart = cart.filter((item) => item.name !== productName);
     }
   }
 
@@ -42,23 +38,22 @@ function decreaseQuantity(productName) {
   updateCart();
 }
 
-// Funkcja do usuwania produktu z koszyka
+// Usuwanie elementów z koszyka
 function removeFromCart(productName) {
   cart = cart.filter((item) => item.name !== productName);
   saveCartToLocalStorage();
   updateCart();
 }
 
-// Funkcja do obliczania całkowitego kosztu
+// koszt całkowity
 function calculateTotalPrice() {
   return cart
     .reduce((sum, item) => sum + item.price * item.quantity, 0)
     .toFixed(2);
 }
 
-// Funkcja do aktualizacji koszyka w UI
 function updateCart() {
-  cartContainer.innerHTML = ""; // Wyczyszczenie zawartości
+  cartContainer.innerHTML = "";
 
   cart.forEach((item) => {
     const cartItem = document.createElement("li");
@@ -69,7 +64,6 @@ function updateCart() {
       <span>${item.quantity} x ${item.price.toFixed(2)} zł</span>
     `;
 
-    // Dodanie przycisków do zarządzania ilością
     const increaseButton = document.createElement("button");
     increaseButton.textContent = "+";
     increaseButton.classList.add("increase-button");
@@ -98,7 +92,7 @@ function updateCart() {
   totalPriceElement.textContent = calculateTotalPrice();
 }
 
-// Funkcja inicjalizująca przyciski "Add to cart"
+// Inicjalizuje przyciski "Add to cart"
 function initializeAddToCartButtons() {
   const productButtons = document.querySelectorAll(".product-list button");
 
@@ -112,9 +106,7 @@ function initializeAddToCartButtons() {
   });
 }
 
-// Inicjalizacja po załadowaniu strony
 document.addEventListener("DOMContentLoaded", () => {
-  // Załaduj koszyk z localStorage, jeśli jest zapisany
   updateCart();
   initializeAddToCartButtons();
 });

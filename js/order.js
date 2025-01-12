@@ -1,8 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const goToSummaryButton = document.getElementById("goToSummary");
 
-  goToSummaryButton.addEventListener("click", () => {
-    // Pobierz dane z formularza
+  const storedData = localStorage.getItem("orderSummary");
+
+  if (storedData) {
+    const orderData = JSON.parse(storedData);
+
+    document.getElementById("shop").value = orderData.shop || "";
+    document.getElementById("name").value = orderData.name || "";
+    document.getElementById("surname").value = orderData.surname || "";
+    document.getElementById("email").value = orderData.email || "";
+    document.getElementById("phoneNumber").value = orderData.phoneNumber || "";
+  }
+
+  const saveDataToLocalStorage = () => {
     const orderData = {
       shop: document.getElementById("shop").value,
       name: document.getElementById("name").value,
@@ -11,30 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
       phoneNumber: document.getElementById("phoneNumber").value,
     };
 
-    // Walidacja danych - wszystkie pola muszą być wypełnione
-    // if (!shop || !name || !surname || !email || !phoneNumber) {
-    //   alert("Please fill in all the fields before proceeding.");
-    //   return;
-    // }
+    if (
+      !orderData.shop ||
+      !orderData.name ||
+      !orderData.surname ||
+      !orderData.email ||
+      !orderData.phoneNumber
+    ) {
+      alert("Please fill in all the fields before proceeding.");
+      return false;
+    }
 
-    // Zapisz dane w localStorage
     localStorage.setItem("orderSummary", JSON.stringify(orderData));
+    return true;
+  };
 
-    // Przejdź do podsumowania
-    window.location.href = "./summary.html";
+  goToSummaryButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (saveDataToLocalStorage()) {
+      window.location.href = "./summary.html";
+    } else {
+      window.location.href = "./offer.html";
+    }
   });
-
-  // Sprawdź, czy dane zamówienia istnieją w localStorage
-  const storedData = localStorage.getItem("orderSummary");
-
-  if (storedData) {
-    const orderData = JSON.parse(storedData);
-
-    // Wypełniaj formularz danymi z localStorage
-    document.getElementById("shop").value = orderData.shop;
-    document.getElementById("name").value = orderData.name;
-    document.getElementById("surname").value = orderData.surname;
-    document.getElementById("email").value = orderData.email;
-    document.getElementById("phoneNumber").value = orderData.phoneNumber;
-  }
 });
