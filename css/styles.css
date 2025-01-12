@@ -14,22 +14,30 @@ body {
   margin-top: 20px;
 }
 
-.order-main-section {
+.offer-main-section {
   background-image: url(../img/cherryblossom-midbg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   margin-top: 20px;
 }
+.order-main-section {
+  background-image: url(../img/cherryblossom-midbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  margin-top: 20px;
+  height: 694px;
+}
 
-/* /* .container {
-  min-width: 320px;
-  max-width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-} */
+.summary-main-section {
+  background-image: url(../img/cherryblossom-midbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  margin-top: 20px;
+  height: 694px;
+}
 
 .icon-svg-hamburger {
   @media screen and (min-width: 1200px) {
@@ -559,5 +567,5 @@ input {
 }
 
 .summary-footer {
-  margin-top: 420px;
+  margin-top: 40px;
 }
