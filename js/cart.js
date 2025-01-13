@@ -1,5 +1,6 @@
 const cartContainer = document.querySelector(".cart-items");
 const totalPriceElement = document.getElementById("cart-total-price");
+const allCart = document.querySelector(".delete-cart-btn");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -18,6 +19,7 @@ function addToCart(productName, productPrice) {
       price: productPrice,
       quantity: 1,
     });
+    allCart.style.display = "block";
   }
 
   saveCartToLocalStorage();
@@ -51,6 +53,16 @@ function calculateTotalPrice() {
     .reduce((sum, item) => sum + item.price * item.quantity, 0)
     .toFixed(2);
 }
+
+//delete all cart
+allCart.addEventListener("click", () => {
+  if (allCart) {
+    cart = [];
+    saveCartToLocalStorage();
+    updateCart();
+    allCart.style.display = "none";
+  }
+});
 
 function updateCart() {
   cartContainer.innerHTML = "";

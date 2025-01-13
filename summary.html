@@ -46,13 +46,28 @@
 
     <section class="summary-main-section">
       <section class="cart-section-summary">
-        <h2>Cart:</h2>
-        <ul class="cart-items">
-          <!-- Produkty dodane do koszyka będą wyświetlane tutaj -->
-        </ul>
-        <p class="cart-total">
-          Total: <span id="cart-total-price">0.00</span> zł
-        </p>
+        <h2 class="cart-title">
+          <img
+            src="./favicon.ico"
+            alt="Black Favicon Cart"
+            class="button-icon-black"
+          />
+          Cart:
+        </h2>
+        <ul class="cart-items"></ul>
+        <section class="total-price">
+          <p class="cart-total">
+            Total: <span id="cart-total-price">0.00</span> zł
+          </p>
+          <button class="delete-cart-btn">
+            Delete cart
+            <img
+              src="./favicon.ico"
+              alt="Black Favicon Cart"
+              class="btnicon-black-delete"
+            />
+          </button>
+        </section>
       </section>
 
       <section class="summary-container">

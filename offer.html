@@ -45,32 +45,40 @@
     </header>
     <section class="offer-main-section">
         <ul class="products-list">
-            <li class="product-list"> <img src="via.placeholder.com/200X130" alt="">
-                <h3>Sake-Original</h3>
-                <p>Description:</p>
-                   <details></details>
-                <p>Price:</p>
-                <button class="add-to-cart-btn">Add to cart</button></li>
+            <li class="product-list"> 
+              <img src="./img/Sake-Original.jpg" alt=" Sake Original" class="sake-img">
+                <h3 class="sake-title">Sake-Original</h3>
+                   <p class="sake-details">Japanese vodka - original taste</p>          
+                   <p class="sake-price">Price: 19.99 zł</p>
+                   <button class="add-to-cart-btn">
+                    <img src="./favicon.cart.ico"  alt="White Favicon Cart" class="button-icon-white" />
+                    Add to cart</button>
+               </li>
         <li class="product-list">
-            <img src="via.placeholder.com/200X130" alt="">
-             <h3>Sake-Lemon</h3>
-             <p>Description:</p>
-                <details></details>
-             <p>Price:</p>
-             <button class="add-to-cart-btn">Add to cart</button>
+            <img src="./img/Sake-Lemon.jpg" alt="Sake Lemon FLavour" class="sake-img">
+             <h3 class="sake-title">Sake-Lemon</h3>
+                <p class="sake-details">Japanese vodka with lemon flavour</p>
+             <p class="sake-price">Price: 19.99 zł</p>
+             <button class="add-to-cart-btn">
+              <img src="./favicon.cart.ico"  alt="White Favicon Cart" class="button-icon-white" />
+              Add to cart</button>
         </li>
-        <li class="product-list"><img src="via.placeholder.com/200X130" alt="">
-            <h3>Sake-Peach</h3>
-            <p>Description:</p>
-               <details></details>
-            <p>Price:</p>
-            <button class="add-to-cart-btn">Add to cart</button></li>
+        <li class="product-list">
+          <img src="./img/Sake-Peach.jpg" alt="Sake Peach Flavour" class="sake-img">
+            <h3 class="sake-title">Sake-Peach</h3>
+               <p class="sake-details">Japanese vodka with peach flavour</p>
+            <p class="sake-price">Price: 19.99zł</p>
+            <button class="add-to-cart-btn">
+              <img src="./favicon.cart.ico"  alt="White Favicon Cart" class="button-icon-white" />
+              Add to cart</button></li>
         <li class="product-list">   
-            <h3>Sake-Jasmine</h3>
-            <p>Description:</p>
-               <details></details>
-            <p>Price:</p>
-            <button class="add-to-cart-btn">Add to cart</button></li></li></ul>
+          <img src="./img/Sake_Jasmine.jpg" alt="Sake Jasmine Flavour" class="sake-img jasmine">
+            <h3 class="sake-title">Sake-Jasmine</h3>
+               <p class="sake-details">Japanese vodka with jasmine flavour</p>
+            <p class="sake-price">Price: 19.99zł</p>
+            <button class="add-to-cart-btn">
+              <img src="./favicon.cart.ico"  alt="White Favicon Cart" class="button-icon-white" />
+              Add to cart</button></li></li></ul>
             <section class="continue-shopping-section">
               <a href="./index.html" class="back-home ">Back home</a>
               <a href="./order.html" class="continue-shopping">Continue Shopping</a>
@@ -80,11 +88,25 @@
 
 
     <section class="cart-section">
-      <h2>Cart:</h2>
+      <h2 class="cart-title"> 
+        <img 
+        src="./favicon.ico" 
+        alt="Black Favicon Cart"
+        class="button-icon-black" />
+        Cart:
+      </h2>
       <ul class="cart-items">
-        <!-- Produkty dodane do koszyka będą wyświetlane tutaj -->
       </ul>
+      <section class="total-price">
       <p class="cart-total">Total: <span id="cart-total-price">0.00</span> zł</p>
+      <button class="delete-cart-btn">
+        Delete cart 
+        <img 
+        src="./favicon.ico" 
+        alt="Black Favicon Cart" 
+        class="btnicon-black-delete">
+      </button>
+    </section>
     </section>
     
 
@@ -161,6 +183,7 @@
     ></script>
     <script src="./js/menu-mobile.js"></script>
     <script src="./js/button-send.js"></script>
+    <script src="./js/order.js"></script>
     <script src="./js/cart.js"></script>
   </body>
 </html>
