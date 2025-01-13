@@ -6,37 +6,35 @@ body {
 }
 
 .main-section {
-  background-image: url(../img/cherryblossom-bg.jpg);
+  background-image: url(../img/Image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   height: 850px;
-  margin-top: 20px;
 }
 
 .offer-main-section {
-  background-image: url(../img/cherryblossom-midbg.jpg);
+  background-image: url(../img/Image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  margin-top: 20px;
 }
 .order-main-section {
-  background-image: url(../img/cherryblossom-midbg.jpg);
+  background-image: url(../img/Image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  margin-top: 20px;
   height: 694px;
+  padding-top: 35px;
 }
 
 .summary-main-section {
-  background-image: url(../img/cherryblossom-midbg.jpg);
+  background-image: url(../img/Image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  margin-top: 20px;
   height: 694px;
+  padding-top: 45px;
 }
 
 .icon-svg-hamburger {
@@ -132,7 +130,9 @@ body {
   padding: 32px;
   background-color: #9a0924;
   z-index: 999;
-
+  background-image: url(../img/cherry\ 1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
@@ -157,7 +157,7 @@ body {
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  color: whitesmoke;
+  color: red;
   text-decoration: none;
   font-size: 45px;
   text-align: center;
@@ -173,6 +173,7 @@ body {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   height: 50px;
   width: 465px;
+  border-bottom: 1px solid rgb(205, 204, 204);
   @media screen and (min-width: 1200px) {
     background-color: transparent;
     margin: 0 auto 0 auto;
@@ -246,8 +247,6 @@ body {
 
 .continue-shopping-section,
 .order-shopping-section {
-  margin-bottom: 20px;
-
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: row;
@@ -273,6 +272,7 @@ body {
   background-color: #ea4aea;
   border-radius: 25px;
   border: none;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
@@ -332,7 +332,7 @@ input {
     flex-direction: row;
     flex-wrap: wrap;
     width: 850px;
-    margin: 70px 0 70px 70px;
+    margin: 0 0 70px 70px;
   }
 }
 
@@ -348,6 +348,7 @@ input {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 3px;
+  margin-top: 20px;
 }
 
 .sake-img {
@@ -397,9 +398,9 @@ input {
 }
 
 .button-icon-black {
-  position: absolute;
-  top: 40px;
-  left: 10px;
+  position: relative;
+  top: 3px;
+  left: 0;
   width: 22px;
   height: 22px;
 }
@@ -450,7 +451,7 @@ input {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   width: 500px;
   padding-bottom: 35px;
-  margin: 35px auto;
+  margin: 0 auto 35px auto;
   background-color: whitesmoke;
 }
 
@@ -538,7 +539,6 @@ input {
     background-color: #752e45;
     margin: 0;
     padding-top: 30px;
-    margin-top: 35px;
   }
 }
 
@@ -654,7 +654,7 @@ input {
   padding: 15px 30px 15px 10px;
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-  margin: 45px auto;
+  margin: 0 auto 45px auto;
   width: 500px;
   background-color: whitesmoke;
 }
@@ -683,10 +683,6 @@ input {
   border-radius: 25px;
   margin-left: 10px;
   cursor: pointer;
-}
-
-.summary-footer {
-  margin-top: 80px;
 }
 
 .summary-container {
