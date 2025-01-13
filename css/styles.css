@@ -48,10 +48,11 @@ body {
 }
 
 .icon-svg-close {
-  width: 80px;
   position: absolute;
   top: 5px;
-  right: 55px;
+  right: 85px;
+  width: 45px;
+  height: 45px;
 }
 
 .page-header {
@@ -129,7 +130,7 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: whitesmoke;
+  background-color: #9a0924;
   z-index: 999;
 
   transform: translateX(100%);
@@ -156,8 +157,11 @@ body {
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  color: #212121;
+  color: whitesmoke;
   text-decoration: none;
+  font-size: 45px;
+  text-align: center;
+  margin: 150px auto 15px auto;
 }
 
 .js-close-menu {
