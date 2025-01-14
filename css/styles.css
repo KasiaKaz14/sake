@@ -6,11 +6,19 @@ body {
 }
 
 .main-section {
-  background-image: url(../img/Image.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 850px;
+  @media screen and (max-width: 767px) {
+    background-image: url(../img/background-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1200px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(../img/Image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 1100px;
+  }
 }
 
 .offer-main-section {
@@ -38,12 +46,16 @@ body {
 }
 
 .marquee {
-  font-size: 30px;
   color: red;
-  flex-grow: 1; /* Sprawia, że marquee zajmuje całą dostępną przestrzeń */
-  margin: 0 10px; /* Odstęp po bokach */
-  font-weight: bold;
-  white-space: nowrap;
+  font-size: 20px;
+  padding: 10px;
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    flex-grow: 1; /* Sprawia, że marquee zajmuje całą dostępną przestrzeń */
+    margin: 0 10px; /* Odstęp po bokach */
+    font-weight: bold;
+    white-space: nowrap;
+  }
 }
 
 .icon-svg-hamburger {
@@ -136,7 +148,6 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #9a0924;
   z-index: 999;
   background-image: url(../img/cherry-menu.png);
   background-repeat: no-repeat;
@@ -178,40 +189,55 @@ body {
 }
 
 .header {
+  display: flex;
   background-color: transparent;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   height: 50px;
   width: 465px;
-  border-bottom: 1px solid rgb(205, 204, 204);
   @media screen and (min-width: 1200px) {
     background-color: transparent;
     margin: 0 auto 0 auto;
+    border-bottom: 1px solid rgb(205, 204, 204);
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
     height: 70px;
     width: 100%;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
   }
 }
 
 .my-site {
-  padding: 10px;
+  display: flex;
+  padding: 5px 0 0 10px;
+  color: #4b0513;
+  text-decoration: none;
+  flex-shrink: 0;
+  font-size: 25px;
   @media screen and (min-width: 1200px) {
-    font-size: 25px;
-    text-decoration: none;
-    color: #4b0513;
-    flex-shrink: 0;
+    padding: 10px;
   }
 }
 
 .link-section {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   @media screen and (min-width: 1200px) {
     width: 400px;
     text-align: center;
-    margin: 0 auto;
-    padding-top: 100px;
   }
+}
+
+.link-section-paragraph {
+  background-color: whitesmoke;
+  border-radius: 15px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  padding: 20px;
 }
 
 .link-to-order {
@@ -221,7 +247,10 @@ body {
   padding: 10px 15px;
   border: none;
   border-radius: 25px;
-  margin-left: 250px;
+  margin-left: 165px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 250px;
+  }
 }
 
 .order-title {
@@ -545,15 +574,24 @@ input {
 }
 
 .footer {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    gap: 15px;
+    background-color: #752e45;
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
     height: 200px;
-    background-color: #752e45;
     margin: 0;
     padding-top: 30px;
+    background-color: #752e45;
   }
 }
 
@@ -563,6 +601,9 @@ input {
 }
 
 .footer-contact-info {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
   @media screen and (min-width: 1200px) {
     margin: 0;
     padding: 0;
@@ -572,9 +613,11 @@ input {
 }
 
 .footer-contact-section {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 767px) {
+  }
   @media screen and (min-width: 1200px) {
-    display: flex;
-    flex-direction: column;
     gap: 10px;
     padding-top: 20px;
     padding-left: 15px;
@@ -594,13 +637,21 @@ input {
   margin-left: 40px;
 }
 
+.footer-sm-section {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
 .footer-sm {
   list-style: none;
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-  }
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
 
 .icon-sm-link {
