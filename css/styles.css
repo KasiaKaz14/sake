@@ -630,10 +630,15 @@ input {
 
 .age-info-details {
   background-color: #f5f5dc;
-  width: 400px;
   border-radius: 15px;
   text-align: center;
   padding: 30px 20px;
+  @media screen and (max-width: 767px) {
+    width: 328px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 400px;
+  }
 }
 
 .age-info-alert {
