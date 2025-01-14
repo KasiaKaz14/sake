@@ -152,7 +152,6 @@ body {
   cursor: pointer;
   border: none;
   outline: none;
-  margin-left: 259px;
   margin-top: 4px;
   @media screen and (min-width: 1200px) {
     right: 10px;
@@ -243,6 +242,9 @@ body {
   text-decoration: none;
   flex-shrink: 0;
   font-size: 25px;
+  @media screen and (max-width: 767px) {
+    margin-right: 5px;
+  }
   @media screen and (min-width: 1200px) {
     padding: 10px;
   }
