@@ -602,6 +602,12 @@ input {
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+  @media screen and (max-width: 767px) {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 328px;
+  }
 }
 
 .custom-alert-content .close-alert {
