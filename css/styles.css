@@ -22,27 +22,50 @@ body {
 }
 
 .offer-main-section {
-  background-image: url(../img/Image.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
+  @media screen and (max-width: 767px) {
+    background-image: url(../img/background-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(../img/Image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+  }
 }
 .order-main-section {
-  background-image: url(../img/Image.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 694px;
-  padding-top: 35px;
+  @media screen and (max-width: 767px) {
+    background-image: url(../img/background-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(../img/Image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 694px;
+    padding-top: 35px;
+  }
 }
 
 .summary-main-section {
-  background-image: url(../img/Image.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 694px;
-  padding-top: 45px;
+  @media screen and (max-width: 767px) {
+    background-image: url(../img/background-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(../img/Image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 694px;
+    padding-top: 45px;
+  }
 }
 
 .marquee {
@@ -51,9 +74,8 @@ body {
   padding: 10px;
   @media screen and (min-width: 1200px) {
     font-size: 30px;
-    flex-grow: 1; /* Sprawia, że marquee zajmuje całą dostępną przestrzeń */
-    margin: 0 10px; /* Odstęp po bokach */
-    font-weight: bold;
+    flex-grow: 1;
+    margin: 0 10px;
     white-space: nowrap;
   }
 }
@@ -115,6 +137,7 @@ body {
 
 .menu-toggle {
   min-height: 40px;
+  min-width: 50px;
   min-width: 40px;
   display: flex;
   align-items: center;
@@ -127,7 +150,10 @@ body {
   outline: none;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 7px;
+  @media screen and (min-width: 1200px) {
+    right: 10px;
+  }
 }
 
 /* @media (min-width: 768px) {
@@ -256,6 +282,9 @@ body {
 .order-title {
   text-align: center;
   margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    font-size: 22px;
+  }
 }
 
 .form {
@@ -269,6 +298,9 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
   @media screen and (min-width: 1200px) {
     margin: 0 auto;
   }
@@ -371,6 +403,10 @@ input {
   gap: 15px;
   margin-bottom: 50px;
   list-style: none;
+  @media screen and (max-width: 767px) {
+    margin: 0;
+  }
+
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: row;
@@ -384,49 +420,80 @@ input {
   border: 2px solid #ec0bd7;
   border-radius: 15px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-  width: 400px;
-  height: 600px;
-  text-align: center;
   background-color: whitesmoke;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 3px;
   margin-top: 20px;
+  @media screen and (max-width: 767px) {
+    width: 360px;
+    height: 474px;
+    margin-left: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    gap: 3px;
+  }
 }
 
 .sake-img {
-  width: 400px;
-  height: 420px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  @media screen and (max-width: 767px) {
+    width: 360px;
+    height: 300px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 400px;
+    height: 420px;
+  }
 }
 
 .sake-title {
   font-size: 25px;
-  margin: 0;
-  padding: 0;
-  margin-left: 15px;
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    padding: 0;
+    margin-left: 15px;
+  }
 }
 
 .sake-details {
   color: #4e4b4b;
-  margin: 0;
-  padding: 0;
-  margin-right: 120px;
-  margin-left: 11px;
-  cursor: pointer;
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    padding: 0;
+    margin-right: 120px;
+    margin-left: 11px;
+  }
+}
+
+.sake-original-details {
+  margin-left: 66px;
 }
 
 .sake-price {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-top: 35px;
   margin-left: 15px;
   font-size: 20px;
   color: #080707;
   font-weight: 500;
+  @media screen and (max-width: 767px) {
+    margin-top: 22px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 35px;
+  }
 }
 
 .add-to-cart-btn {
@@ -437,8 +504,15 @@ input {
   width: 120px;
   height: 30px;
   cursor: pointer;
-  margin-left: 110px;
-  margin-top: 35px;
+  @media screen and (max-width: 767px) {
+    margin-left: 202px;
+    margin-top: -41px;
+    margin-bottom: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 110px;
+    margin-top: 35px;
+  }
 }
 
 .button-icon-black {
@@ -465,6 +539,9 @@ input {
   flex-direction: column;
   margin-top: 40px;
   gap: 10px;
+  @media screen and (max-width: 767px) {
+    margin-top: 23px;
+  }
 }
 
 .order-buttons {
@@ -493,10 +570,15 @@ input {
   border: 2px solid #ec0bd7;
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-  width: 500px;
   padding-bottom: 35px;
   margin: 0 auto 35px auto;
   background-color: whitesmoke;
+  @media screen and (max-width: 767px) {
+    width: 399px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 500px;
+  }
 }
 
 .custom-alert {
@@ -676,18 +758,28 @@ input {
 }
 
 .cart-section {
-  position: absolute;
-  top: 185px;
-  right: 25px;
-  border: 2px dotted #ec0bd7;
-  padding: 15px 30px 0 10px;
+  background-color: whitesmoke;
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-  background-color: whitesmoke;
+  border: 2px dotted #ec0bd7;
+  @media screen and (max-width: 767px) {
+    padding: 15px 13px 0 7px;
+    margin: 30px 48px;
+    width: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    top: 185px;
+    right: 25px;
+    padding: 15px 30px 0 10px;
+  }
 }
 
 .cart-title {
   padding-left: 25px;
+  @media screen and (max-width: 767px) {
+    padding-left: 9px;
+  }
 }
 
 .total-price {
@@ -702,10 +794,15 @@ input {
   width: 120px;
   height: 30px;
   cursor: pointer;
-  margin-left: 320px;
-  padding-bottom: 5px;
   position: relative;
   bottom: 30px;
+  padding-bottom: 5px;
+  @media screen and (max-width: 767px) {
+    margin-left: 220px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 320px;
+  }
 }
 
 .btnicon-black-delete {
@@ -721,8 +818,14 @@ input {
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   margin: 0 auto 45px auto;
-  width: 500px;
   background-color: whitesmoke;
+  @media screen and (max-width: 767px) {
+    width: 363px;
+    padding: 15px 30px 0 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 500px;
+  }
 }
 
 .cart-items {
@@ -730,12 +833,18 @@ input {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  @media screen and (max-width: 767px) {
+    padding-left: 12px;
+  }
 }
 
 .cart-total {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
+  @media screen and (max-width: 767px) {
+    margin-left: 11px;
+  }
 }
 
 .increase-button,
@@ -751,14 +860,28 @@ input {
   cursor: pointer;
 }
 
+.increase-button,
+.decrease-button {
+  @media screen and (max-width: 767px) {
+    width: 39px;
+    margin-left: 6px;
+  }
+}
+
 .summary-container {
   border: 2px dotted #ec0bd7;
   padding: 15px 30px 15px 10px;
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-  margin: 45px auto;
-  width: 500px;
   background-color: whitesmoke;
+  background-color: whitesmoke;
+  @media screen and (max-width: 767px) {
+    width: 363px;
+    margin: 45px auto 11px auto;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 500px;
+  }
 }
 
 .order-summary {
