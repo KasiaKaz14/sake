@@ -632,12 +632,14 @@ input {
   background-color: #f5f5dc;
   border-radius: 15px;
   text-align: center;
-  padding: 30px 20px;
+
   @media screen and (max-width: 767px) {
     width: 328px;
+    padding: 30px 4px;
   }
   @media screen and (min-width: 1200px) {
     width: 400px;
+    padding: 30px 20px;
   }
 }
 
