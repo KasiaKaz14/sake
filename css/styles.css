@@ -764,7 +764,7 @@ input {
   border: 2px dotted #ec0bd7;
   @media screen and (max-width: 767px) {
     padding: 15px 13px 0 7px;
-    margin: 30px 48px;
+    margin: 30px 36px;
     width: 370px;
   }
   @media screen and (min-width: 1200px) {
