@@ -959,3 +959,8 @@ input {
     line-height: 2;
   }
 }
+
+.all-rights {
+  display: flex;
+  justify-content: center;
+}
