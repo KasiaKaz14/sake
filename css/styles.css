@@ -57,7 +57,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 40px;
-    width: 480px;
   }
   @media screen and (min-width: 1200px) {
     background-image: url(../img/Image.jpg);
@@ -433,7 +432,7 @@ input {
   @media screen and (max-width: 767px) {
     width: 360px;
     height: 474px;
-    margin-left: 12px;
+    margin-left: -16px;
   }
   @media screen and (min-width: 1200px) {
     width: 400px;
@@ -555,14 +554,26 @@ input {
 }
 
 .order-button {
-  width: 180px;
-  height: 40px;
-  border: none;
-  border-radius: 25px;
-  color: whitesmoke;
-  background-color: #ea4aea;
-  margin: 25px auto;
-  font-family: "Kanit", sans-serif;
+  @media screen and (max-width: 767px) {
+    width: 157px;
+    height: 44px;
+    border: none;
+    border-radius: 25px;
+    color: whitesmoke;
+    background-color: #ea4aea;
+    margin: 25px 32px 25px 28px;
+    font-family: "Kanit", sans-serif;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    color: whitesmoke;
+    background-color: #ea4aea;
+    margin: 25px auto;
+    font-family: "Kanit", sans-serif;
+  }
 }
 
 .order-button:hover,
@@ -780,7 +791,7 @@ input {
   border: 2px dotted #ec0bd7;
   @media screen and (max-width: 767px) {
     padding: 15px 13px 0 7px;
-    margin: 30px 36px;
+    margin: 30px 10px;
     width: 370px;
   }
   @media screen and (min-width: 1200px) {
@@ -833,14 +844,16 @@ input {
   padding: 15px 30px 15px 10px;
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-  margin: 0 auto 45px auto;
+
   background-color: whitesmoke;
   @media screen and (max-width: 767px) {
     width: 363px;
-    padding: 15px 30px 0 10px;
+    padding: 15px 0 0 10px;
+    margin: 0 1px 45px 18px;
   }
   @media screen and (min-width: 1200px) {
     width: 500px;
+    margin: 0 auto 45px auto;
   }
 }
 
@@ -886,17 +899,18 @@ input {
 
 .summary-container {
   border: 2px dotted #ec0bd7;
-  padding: 15px 30px 15px 10px;
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   background-color: whitesmoke;
   background-color: whitesmoke;
   @media screen and (max-width: 767px) {
     width: 363px;
-    margin: 45px auto 11px auto;
+    margin: 45px 1px 11px 17px;
+    padding: 15px 7px 15px 10px;
   }
   @media screen and (min-width: 1200px) {
     width: 500px;
+    padding: 15px 30px 15px 10px;
   }
 }
 
