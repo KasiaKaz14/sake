@@ -809,11 +809,16 @@ input {
   padding-left: 25px;
   @media screen and (max-width: 767px) {
     padding-left: 9px;
+    font-size: 21px;
   }
 }
 
 .total-price {
   padding-top: 20px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .delete-cart-btn {
@@ -824,14 +829,15 @@ input {
   width: 120px;
   height: 30px;
   cursor: pointer;
-  position: relative;
-  bottom: 30px;
   padding-bottom: 5px;
   @media screen and (max-width: 767px) {
-    margin-left: 220px;
+    margin-left: 46px;
+    margin-bottom: 20px;
   }
   @media screen and (min-width: 1200px) {
     margin-left: 320px;
+    position: relative;
+    bottom: 30px;
   }
 }
 
@@ -847,12 +853,11 @@ input {
   padding: 15px 30px 15px 10px;
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-
   background-color: whitesmoke;
   @media screen and (max-width: 767px) {
     width: 363px;
-    padding: 15px 0 0 10px;
-    margin: 0 1px 45px 18px;
+    padding: 15px 0px 0px 10px;
+    margin: 0 13px 45px 17px;
   }
   @media screen and (min-width: 1200px) {
     width: 500px;
@@ -870,6 +875,15 @@ input {
   }
 }
 
+.cart-item {
+  @media screen and (max-width: 767px) {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+  }
+}
+
 .cart-total {
   font-size: 20px;
   font-weight: 600;
@@ -882,21 +896,26 @@ input {
 .increase-button,
 .decrease-button,
 .remove-button {
-  width: 70px;
   height: 30px;
   color: whitesmoke;
   background-color: #ec0bd7;
   border: none;
   border-radius: 25px;
-  margin-left: 10px;
   cursor: pointer;
+  @media screen and (max-width: 767px) {
+    width: 60px;
+    margin-left: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 70px;
+    margin-left: 10px;
+  }
 }
 
 .increase-button,
 .decrease-button {
   @media screen and (max-width: 767px) {
-    width: 39px;
-    margin-left: 6px;
+    width: 32px;
   }
 }
 
@@ -905,16 +924,21 @@ input {
   border-radius: 25px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   background-color: whitesmoke;
-  background-color: whitesmoke;
   @media screen and (max-width: 767px) {
-    width: 363px;
     margin: 45px 1px 11px 17px;
     padding: 15px 7px 15px 10px;
+    width: 363px;
   }
   @media screen and (min-width: 1200px) {
     width: 500px;
     padding: 15px 30px 15px 10px;
     margin: 15px auto;
+  }
+}
+
+.summary-title {
+  @media screen and (max-width: 767px) {
+    margin: 0 68px;
   }
 }
 
