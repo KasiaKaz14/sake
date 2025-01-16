@@ -10,7 +10,7 @@ body {
     background-image: url(../img/background-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 1200px;
+    height: 100%;
   }
   @media screen and (min-width: 1200px) {
     background-image: url(../img/Image.jpg);
@@ -245,14 +245,16 @@ body {
   text-decoration: none;
   flex-shrink: 0;
   font-size: 25px;
+  background-color: antiquewhite;
+  border-radius: 15px 0 15px 0;
   @media screen and (max-width: 767px) {
     margin-right: 5px;
+    margin: 3px;
+    padding-right: 10px;
+    padding-bottom: 5px;
   }
   @media screen and (min-width: 1200px) {
     padding: 10px;
-    padding: 10px;
-    background-color: antiquewhite;
-    border-radius: 15px 0 15px 0;
     width: 154px;
     height: 38px;
     margin-left: 12px;
@@ -348,7 +350,7 @@ body {
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 40px;
   @media screen and (min-width: 1200px) {
     text-align: center;
     display: flex;
@@ -359,17 +361,21 @@ body {
 }
 
 .home-info-section {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.9);
+  border: 1px solid grey;
+  background-color: whitesmoke;
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: row;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.9);
-    border: 1px solid grey;
-    background-color: aliceblue;
     width: 700px;
   }
 }
 
 .home-info-img {
+  width: 318px;
+  height: 250px;
   @media screen and (min-width: 1200px) {
     width: 300px;
     height: 300px;
@@ -384,11 +390,14 @@ body {
 }
 
 .link-section-paragraph {
-  border-radius: 15px;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  text-align: center;
   @media screen and (min-width: 1200px) {
     text-align: justify;
     padding: 50px;
+    border-radius: 15px;
   }
 }
 
@@ -411,14 +420,21 @@ body {
 
 .link-to-order {
   text-decoration: none;
-  background-color: #ea4aea;
+  background-color: rgb(117, 46, 69);
   color: whitesmoke;
   padding: 10px 15px;
   border: none;
-  border-radius: 25px;
-  margin-left: 165px;
+  border-radius: 5px;
+  margin-bottom: 30px;
   @media screen and (min-width: 1200px) {
     margin: 0;
+    margin-left: 165px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.9);
   }
 }
 
@@ -452,12 +468,17 @@ body {
 }
 
 .about-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
   background-color: whitesmoke;
-  padding: 129px;
   text-align: center;
+  padding: 15px;
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 129px;
+  }
 }
 
 .about-quote {
@@ -978,6 +999,9 @@ input {
 .footer-contact-info {
   @media screen and (max-width: 767px) {
     margin-bottom: 10px;
+    font-size: 21px;
+    color: whitesmoke;
+    text-align: center;
   }
   @media screen and (min-width: 1200px) {
     margin: 0;
