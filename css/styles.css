@@ -17,7 +17,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 1069px;
   }
 }
 
@@ -177,6 +176,9 @@ body {
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
   flex-shrink: 0;
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+  }
 }
 
 .menu-container.is-open {
@@ -194,6 +196,7 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
+  margin: -44px;
   @media screen and (max-width: 767px) {
     margin-right: 43px;
   }
@@ -250,6 +253,88 @@ body {
   }
 }
 
+/* Ogólny styl sekcji Hero */
+.hero {
+  position: relative;
+  height: 100vh; /* Pełna wysokość okna przeglądarki */
+  background-image: url("../img/home-bg.png"); /* Zamień na ścieżkę do zdjęcia */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* Przyciemnienie tła dla lepszej czytelności */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Przezroczysty czarny kolor */
+  z-index: 1;
+}
+
+/* Styl zawartości sekcji */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+/* Nagłówek */
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Podtytuł */
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+}
+
+/* Styl przycisków */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Styl przycisku secondary */
+.hero-button.secondary {
+  background-color: transparent;
+}
+
+.hero-button.secondary:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .link-section {
   width: 320px;
   margin: 0 auto;
@@ -259,21 +344,55 @@ body {
   flex-direction: column;
   gap: 10px;
   @media screen and (min-width: 1200px) {
-    width: 400px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+  }
+}
+
+.home-info-section {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.9);
+    border: 1px solid grey;
+    background-color: aliceblue;
+    width: 700px;
+  }
+}
+
+.home-info-img {
+  @media screen and (min-width: 1200px) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.home-img {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
 .link-section-paragraph {
-  background-color: whitesmoke;
   border-radius: 15px;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   padding: 20px;
+  @media screen and (min-width: 1200px) {
+    text-align: justify;
+    padding: 50px;
+  }
 }
 
 .place-order-section {
   display: flex;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+    padding-top: 16px;
+  }
 }
 
 .link-to-order {
@@ -353,12 +472,20 @@ body {
 .back-home {
   text-decoration: none;
   padding: 10px;
-  color: white;
-  background-color: #ea4aea;
-  border-radius: 25px;
-  border: none;
+  color: darkslategrey;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: 1px solid #ea4aea;
   margin-bottom: 20px;
   cursor: pointer;
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    background-color: #ea4aea;
+    color: whitesmoke;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  }
 }
 
 .come-back-button {
@@ -377,9 +504,9 @@ body {
   padding: 10px;
   padding-left: 19px;
   border: none;
-  border-radius: 25px;
+  border-radius: 5px;
   color: whitesmoke;
-  background-color: #ea4aea;
+  background-color: rgb(117, 46, 69);
   margin: 25px auto;
   text-decoration: none;
 }
@@ -388,6 +515,7 @@ body {
 .summary-come-back-button:focus {
   cursor: pointer;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ea4aea;
 }
 
 select {
@@ -509,10 +637,10 @@ input {
 }
 
 .add-to-cart-btn {
-  border: none;
-  border-radius: 25px;
+  border: 1px solid #ea4aea;
+  border-radius: 5px;
   color: whitesmoke;
-  background-color: #ec0bd7;
+  background-color: rgb(117, 46, 69);
   width: 120px;
   height: 30px;
   cursor: pointer;
@@ -524,6 +652,14 @@ input {
   @media screen and (min-width: 1200px) {
     margin-left: 110px;
     margin-top: 35px;
+  }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    background-color: #ea4aea;
+    color: whitesmoke;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -562,23 +698,19 @@ input {
 }
 
 .order-button {
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: rgb(117, 46, 69);
+  border: none;
   @media screen and (max-width: 767px) {
     width: 157px;
     height: 44px;
-    border: none;
-    border-radius: 25px;
-    color: whitesmoke;
-    background-color: #ea4aea;
     margin: 25px 32px 25px 28px;
     font-family: "Kanit", sans-serif;
   }
   @media screen and (min-width: 1200px) {
     width: 180px;
     height: 40px;
-    border: none;
-    border-radius: 25px;
-    color: whitesmoke;
-    background-color: #ea4aea;
     margin: 25px auto;
     font-family: "Kanit", sans-serif;
   }
@@ -588,6 +720,7 @@ input {
 .order-button:focus {
   cursor: pointer;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ea4aea;
 }
 
 .order-form {
@@ -828,9 +961,9 @@ input {
 
 .delete-cart-btn {
   border: none;
-  border-radius: 25px;
+  border-radius: 5px;
   color: whitesmoke;
-  background-color: #ec0bd7;
+  background-color: rgb(117, 46, 69);
   width: 120px;
   height: 30px;
   cursor: pointer;
@@ -843,6 +976,13 @@ input {
     margin-left: 320px;
     position: relative;
     bottom: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ea4aea;
   }
 }
 
@@ -906,9 +1046,9 @@ input {
 .remove-button {
   height: 30px;
   color: whitesmoke;
-  background-color: #ec0bd7;
+  background-color: rgb(117, 46, 69);
   border: none;
-  border-radius: 25px;
+  border-radius: 5px;
   cursor: pointer;
   @media screen and (max-width: 767px) {
     width: 60px;
@@ -917,6 +1057,13 @@ input {
   @media screen and (min-width: 1200px) {
     width: 70px;
     margin-left: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ea4aea;
   }
 }
 
