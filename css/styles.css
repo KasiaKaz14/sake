@@ -722,15 +722,19 @@ input {
   @media screen and (min-width: 1200px) {
     margin: 0;
     padding: 0;
-    margin-right: 120px;
+    margin: 0;
+    margin-right: 141px;
     margin-left: 11px;
+    text-align: justify;
   }
 }
 
 .sake-original-details {
   margin-left: 66px;
   @media screen and (min-width: 1200px) {
-    margin-left: 13px;
+    margin-left: 12px;
+    text-align: justify;
+    width: 217px;
   }
 }
 
@@ -879,12 +883,18 @@ input {
 }
 
 .custom-alert-content .close-alert {
-  background: #ea4aea;
+  background: rgb(117, 46, 69);
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: 5px;
   cursor: pointer;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.9);
+    background-color: #ea4aea;
+  }
 }
 
 .age-info {
@@ -962,6 +972,7 @@ input {
 .footer-contact {
   color: whitesmoke;
   text-decoration: none;
+  text-align: center;
 }
 
 .footer-contact-info {
@@ -973,6 +984,7 @@ input {
     padding: 0;
     font-size: 20px;
     color: whitesmoke;
+    text-align: center;
   }
 }
 
@@ -984,7 +996,7 @@ input {
   @media screen and (min-width: 1200px) {
     gap: 10px;
     padding-top: 20px;
-    padding-left: 15px;
+    text-align: center;
   }
 }
 
