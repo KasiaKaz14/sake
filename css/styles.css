@@ -250,6 +250,12 @@ body {
   }
   @media screen and (min-width: 1200px) {
     padding: 10px;
+    padding: 10px;
+    background-color: antiquewhite;
+    border-radius: 15px 0 15px 0;
+    width: 154px;
+    height: 38px;
+    margin-left: 12px;
   }
 }
 
@@ -386,6 +392,14 @@ body {
   }
 }
 
+.text {
+  margin-right: 30px;
+}
+
+.textx {
+  margin-left: 30px;
+}
+
 .place-order-section {
   display: flex;
   justify-content: center;
@@ -414,6 +428,106 @@ body {
   @media screen and (max-width: 767px) {
     font-size: 22px;
   }
+}
+
+/* Styl dla sekcji o firmie */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+  padding: 129px;
+  text-align: center;
+}
+
+.about-quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #635f5f;
+  padding-left: 10px;
+  background-color: #e2dbdb;
+  border-radius: 15px 0 15px 0;
+}
+
+.about-images {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Styl dla sekcji procesu produkcji */
+.process-section {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.process-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.process-step {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Dodanie animacji do procesu */
+.process-step:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .form {
