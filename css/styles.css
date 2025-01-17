@@ -428,13 +428,13 @@ body {
   margin-bottom: 30px;
   @media screen and (min-width: 1200px) {
     margin: 0;
-    margin-left: 165px;
   }
 
   &:hover,
   &:focus {
     cursor: pointer;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.9);
+    background-color: #ea4aea;
   }
 }
 
@@ -751,7 +751,7 @@ input {
 }
 
 .sake-original-details {
-  margin-left: 66px;
+  margin-left: 22px;
   @media screen and (min-width: 1200px) {
     margin-left: 12px;
     text-align: justify;
@@ -1177,6 +1177,16 @@ input {
     flex-direction: row;
     gap: 2px;
   }
+  @media screen and (min-width: 1200px) {
+    font-size: 19px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+}
+
+.cart-item span {
+  width: 120px;
 }
 
 .cart-total {
@@ -1205,7 +1215,7 @@ input {
     margin-left: 10px;
   }
   @media screen and (min-width: 1200px) {
-    width: 70px;
+    width: 55px;
     margin-left: 10px;
   }
 
