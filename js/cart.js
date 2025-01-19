@@ -112,7 +112,7 @@ function initializeAddToCartButtons() {
     button.addEventListener("click", (event) => {
       const productElement = event.target.closest(".product-list");
       const productName = productElement.querySelector("h3").textContent;
-      const productPrice = 19.99; // Cena stała
+      const productPrice = 49.99;
       addToCart(productName, productPrice);
     });
   });
